@@ -10,6 +10,6 @@ public interface ProductoService {
     void deleteProducto(Producto producto);
     void updateProducto(Long id,Producto producto);
     List<Producto> findAllProductos();
-    Producto findProductoById(Long id_producto);
+    Producto findProductoById(Long id);
 
 }
