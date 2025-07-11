@@ -29,7 +29,6 @@ public class InventarioServiceImpl implements  InventarioService {
     public void updateInventario(Long id, Inventario inventario) {
         Inventario i = inventarioRepository.findById(id)
                 .orElseThrow();
-        i.setFecha(inventario.getFecha());
         i.setTitulo(inventario.getTitulo());
         inventarioRepository.save(i);
     }
