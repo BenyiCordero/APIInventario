@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
@@ -17,6 +18,8 @@ public class ProductoDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_productoDetails;
+    @CreationTimestamp
+    @Temporal(TemporalType.DATE)
     @Column(name = "fecha_venc")
     private Date fecha_venc;
     @Column(name = "cantidad")
