@@ -5,7 +5,6 @@ import com.ApiAppInventario.repository.ProductoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ProductoServiceImpl implements  ProductoService {
@@ -22,8 +21,8 @@ public class ProductoServiceImpl implements  ProductoService {
     }
 
     @Override
-    public void deleteProducto(Producto producto) {
-        productoRepository.delete(producto);
+    public void deleteProducto(Long id) {
+        productoRepository.deleteById(id);
     }
 
     @Override
